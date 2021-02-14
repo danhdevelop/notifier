@@ -13,8 +13,7 @@ class NotifierProvider extends InheritedWidget {
   }
 
   static Notifier of(BuildContext context) {
-    return (context.inheritFromWidgetOfExactType(NotifierProvider)
-            as NotifierProvider)
+    return (context.dependOnInheritedWidgetOfExactType<NotifierProvider>())
         ._notifier;
   }
 }
